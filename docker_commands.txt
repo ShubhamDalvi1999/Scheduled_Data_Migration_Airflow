@@ -1,0 +1,17 @@
+XXXXXXXX
+mysqlroot
+
+docker-compose -f .\docker-compose-LocalExecutore.yml up -d
+
+
+docker exec -it airflow_project_one-webserver-1 /bin/bash
+
+docker exec -it airflow_project_one-mysql-1 /bin/bash
+docker exec -it airflow_project_one-mysql-1cd  mysql -u root -p
+
+connid mysql_conn
+conn type MySQL
+host MySQL
+schema MySQL
+login root
+password root

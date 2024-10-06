@@ -1,0 +1,10 @@
+Conn Id  mysql_conn
+Conn Type  MySQL
+Host       mysql
+Schema     mysql
+Login      root
+Password   root
+
+
+
+
