@@ -1,4 +1,61 @@
 # Airflow Data Processing Pipeline
+<h2 align="center">
+  Welcome to My Data Engineering Project!
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
+</h2>
+
+
+<!-- Intro  -->
+<h3 align="center">
+        <samp>&gt; Hey There!, I am
+                <b><a target="_blank" href="https://yourwebsite.com">Shubham Dalvi</a></b>
+        </samp>
+</h3>
+
+<p align="center"> 
+  <samp>
+    <br>
+    「 I am a data engineer with a passion for big data , distributed computing and data visualization 」
+    <br>
+    <br>
+  </samp>
+</p>
+
+<div align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=435&lines=Spark+%7C+DataBricks++%7C+Power+BI+;Snowflake+%7C+Azure++%7C+Airflow;3+yrs+of+IT+experience+as+Analyst+%40+;Accenture+;Passionate+Data+Engineer+" alt="Typing SVG" /></a>
+</div>
+
+<p align="center">
+ <a href="https://linkedin.com/in/yourprofile" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="yourprofile"/>
+ </a>
+</p>
+<br />
+
+<!-- About Section -->
+ # About me
+ 
+<p>
+ <img align="right" width="350" src="/assets/programmer.gif" alt="Coding gif" />
+  
+ ✌️ &emsp; Enjoy solving data problems <br/><br/>
+ ❤️ &emsp; Passionate about big data technologies, distributed systems and data visualizations<br/><br/>
+ 📧 &emsp; Reach me : dshubhamp1999@gmail.com<br/><br/>
+
+</p>
+
+<br/>
+<br/>
+<br/>
+
+## Skills and Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
 
 ## Overview
 This project demonstrates an automated data processing pipeline using Apache Airflow. The pipeline consists of several tasks that handle data ingestion, cleaning, transformation, and storage. Each task is defined as a node in the workflow, ensuring a clear and maintainable structure.
