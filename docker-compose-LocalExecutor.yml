@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+    postgres:
+        image: postgres:9.6
+        environment:
+            - POSTGRES_USER=airflow
+            - POSTGRES_PASSWORD=airflow
+            - POSTGRES_DB=airflow
+
+    mysql:
+        image: mysql:5.7.27
+        environment:
+            - MYSQL_ROOT_PASSWORD=root         
+        volumes: 
+            - ./store_files:/store_files_mysql/ # same location is added to airflow container
+            - ./store_files:/var/lib/mysql-files   # adding local file to sql-container
+            - ./mysql.cnf:/etc/mysql/mysql.cnf  #new line
+
+    webserver:
+        image: puckel/docker-airflow:1.10.4
+        restart: no
+        depends_on:
+            - postgres
+            - mysql #new line
+        environment:
+            - INSTALL_MYSQL=y #new line
+            - LOAD_EX=n
+            - EXECUTOR=Local
+            # - AIRFLOW__CORE__SQL_ALCHEMY_CONN=mysql+mysqlconnector://root:root@mysql/airflow
+            # - AIRFLOW__CORE__RESULT_BACKEND=db+mysql://root:root@mysql/airflow
+            - AIRFLOW__SMTP__SMTP_HOST=smtp.gmail.com       #new lines
+            - AIRFLOW__SMTP__SMTP_USER=dshubhamp1999@gmail.com
+            - AIRFLOW__SMTP__SMTP_PASSWORD=vsxalofzluwjvebh   #app_password- to use it for this app
+            - AIRFLOW__SMTP__SMTP_PORT=587
+            - AIRFLOW__SMTP__SMTP_MAIL_FROM=Airflow
+          
+        volumes:
+            - ./dags:/usr/local/airflow/dags
+            - ./store_files:/usr/local/airflow/store_files_airflow  # same location is added to airflow container.. any file created reflects here
+            - ./sql_files:/usr/local/airflow/sql_files              #new line
+            # - ./store_files:/store_files_mysql/                     #new line to check if now the insert stmt works
+            # Uncomment to include custom plugins
+            # - ./plugins:/usr/local/airflow/plugins
+        ports:
+            - "8080:8080"
+        command: webserver
+        healthcheck:
+            test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+            interval: 30s
+            timeout: 30s
+            retries: 3
