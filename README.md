@@ -47,6 +47,12 @@
 <br/>
 <br/>
 
+
+
+https://github.com/user-attachments/assets/6ae99078-1d19-49e8-8150-e6f6c12aef72
+
+
+
 ## Skills and Technologies
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
