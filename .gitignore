@@ -1,2 +1,10 @@
 *.docx
 *.txt
+*.__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+/store_files
